@@ -1,38 +1,184 @@
-<div class="container d-flex align-items-center justify-content-between mt-5 custom-color">
-  <!-- Left: Logo -->
-  <div class="logo">
-    <img src="../images/logo.png" alt="logo" height="50">
-  </div>
-
-  <!-- Center: Menu -->
-  <div class="d-flex gap-4 justify-content-center flex-grow-1 custom-color">
-    <a href="#" class="text-decoration-none text-dark">Home</a>
-    <a href="#" class="text-decoration-none text-dark">About</a>
-    <a href="#" class="text-decoration-none text-dark">Menu</a>
-    <a href="#" class="text-decoration-none text-dark">Contact</a>
-  </div>
-
-  <!-- Right: Second image or label -->
-  <div class="logo">
-    <a href="#" class="text-decoration-none text-dark">Menu</a>
-  </div>
-</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<body class="antialiased">
 
 
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+
+                <a href="#home" class="text-2xl font-extrabold tracking-tight text-white hover:text-indigo-400 transition">
+                    AURORA
+                </a>
 
 
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-indigo-400 transition duration-150 ease-in-out">Home</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-indigo-400 transition duration-150 ease-in-out">Portfolio</a>
+                    <a href="#about" class="text-gray-300 hover:text-indigo-400 transition duration-150 ease-in-out">About</a>
+                    <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition duration-150 ease-in-out">Contact</a>
+                </nav>
+
+                <button class="md:hidden p-2 rounded-md hover:bg-gray-800 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home" class="relative pt-20 pb-28 text-center overflow-hidden bg-black">
+          
+            <div class="relative max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                    Capturing Light, Crafting Stories.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                    A collection of fine art, landscape, and documentary photography. Explore the world through my lens.
+                </p>
+                <a href="#portfolio" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition duration-300 shadow-xl shadow-indigo-500/30">
+                    View Portfolio
+                </a>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">Featured Work</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="image-container">
+                        <img src="https://placehold.co/800x533/1e3a8a/ffffff?text=Landscape+I" alt="Majestic Landscape" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">Mountain Peaks</h3>
+                        <p class="text-gray-400 text-sm">Fine Art, Iceland Expedition</p>
+                    </div>
+                </div>
+
+                <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="image-container">
+                        <img src="https://placehold.co/800x533/92400e/ffffff?text=Portrait+II" alt="Dramatic Portrait" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">Urban Solitude</h3>
+                        <p class="text-gray-400 text-sm">Street Photography, BW Series</p>
+                    </div>
+                </div>
+
+                <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="image-container">
+                        <img src="https://placehold.co/800x533/065f46/ffffff?text=Wildlife+III" alt="Wildlife in Motion" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">The Silent Hunter</h3>
+                        <p class="text-gray-400 text-sm">Nature & Conservation</p>
+                    </div>
+                </div>
 
 
-<!-- <section>
-    <nav class="navbar custom-body">
-    <div class="navbar-left">
-    <img src="../images/logo.png" alt="Logo" class="logo">
-    </div>
+                <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="image-container">
+                        <img src="https://placehold.co/800x533/4338ca/ffffff?text=Architecture+IV" alt="Modern Architecture" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">City Lines</h3>
+                        <p class="text-gray-400 text-sm">Abstract & Geometry</p>
+                    </div>
+                </div>
 
-  <div class="navbar-center d-flex justify-content-center">
-    <a href="#" class="nav-link">Home</a>
-    <a href="#" class="nav-link">About</a>
-    <a href="#" class="nav-link">Menu</a>
-    <a href="#" class="nav-link">Contact</a>
-  </div>
-</section> -->
+                <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="image-container">
+                        <img src="https://placehold.co/800x533/a16207/ffffff?text=Product+V" alt="Gourmet Dish" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">Golden Hour Brew</h3>
+                        <p class="text-gray-400 text-sm">Commercial & Still Life</p>
+                    </div>
+                </div>
+
+                
+                <div class="img-card bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                    <div class="image-container">
+                        <img src="https://placehold.co/800x533/be185d/ffffff?text=Documentary+VI" alt="Candid Moment" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-400">The Market Life</h3>
+                        <p class="text-gray-400 text-sm">Documentary Project</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 sm:py-24 bg-gray-950">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-white">About the Artist</h2>
+                <div class="md:flex md:space-x-10 items-start">
+     
+                    <div class="flex-shrink-0 mb-6 md:mb-0 md:w-1/3">
+                        <img src="https://placehold.co/300x300/374151/ffffff?text=Profile" alt="Photographer Profile" class="w-full h-auto rounded-full object-cover border-4 border-indigo-600 shadow-xl mx-auto md:mx-0">
+                    </div>
+           
+                    <div class="md:w-2/3">
+                        <p class="text-gray-300 text-lg mb-4">
+                            Hello! I'm Alex, a photographer based in the Pacific Northwest with a passion for capturing the raw, untamed beauty of the natural world and the nuanced complexity of human emotion.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            My journey in photography began over a decade ago, fueled by a simple desire to freeze fleeting moments in time. Today, I specialize in landscape and portraiture, striving to infuse every shot with depth and narrative.
+                        </p>
+                        <p class="text-gray-300">
+                            When I'm not behind the lens, you can find me hiking remote trails or enjoying a quiet cup of coffee. Let's connect and create something beautiful together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="py-16 sm:py-24 max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+            <form action="#" method="POST" class="space-y-6 bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                    <input type="text" id="name" name="name" required
+                           class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg shadow-sm placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-white sm:text-sm"
+                           placeholder="Your Name">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                    <input type="email" id="email" name="email" required
+                           class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg shadow-sm placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-white sm:text-sm"
+                           placeholder="you@example.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                    <textarea id="message" name="message" rows="4" required
+                              class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg shadow-sm placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-white sm:text-sm"
+                              placeholder="Tell me about your project or inquiry..."></textarea>
+                </div>
+                <div>
+                    <button type="submit"
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="bg-black border-t border-gray-800 mt-16">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 text-sm">&copy; 2025 Aurora Photography. All rights reserved.</p>
+            <div class="mt-4 space-x-6">
+             
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>

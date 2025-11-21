@@ -1,9 +1,27 @@
-.custom-color a {
-    color: #403F3D;
-}
-.border {
-    border-radius: 100px;
-    width: 1240px;
-    left: 10px;
-    position: absolute;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; 
+            color: #f3f4f6; 
+        }
+        .img-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .img-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+        .image-container {
+            width: 100%;
+            padding-top: 66.66%;
+            position: relative;
+            overflow: hidden;
+        }
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }

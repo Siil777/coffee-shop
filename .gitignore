@@ -1,12 +1,5 @@
-# /node_modules/
-# /build/
+/node_modules/
+/build/
 /.idea/
 
-# Ignore everything
-*
-
-# But not these:
-!.gitignore
-!build/
-!build/**
 

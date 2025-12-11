@@ -791,11 +791,4 @@ document.addEventListener("DOMContentLoaded", function () {
          }
 
     }
-   
-   
-   
-   
-   
-   
-   
    })

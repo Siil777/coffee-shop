@@ -1,5 +1,10 @@
-/node_modules/
-/build/
-/.idea/
+# /node_modules/
+# /build/
+# /.idea/
+*
+!build/
+!build/**
+!.gitignore
+
 
 

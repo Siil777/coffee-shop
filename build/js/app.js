@@ -20447,11 +20447,173 @@ document.addEventListener("DOMContentLoaded", function () {
          }
 
     }
-   
-   
-   
-   
-   
-   
-   
    })
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* -------------------------
+       HIDE ELEMENT AFTER MOVE
+    -------------------------- */
+    const element = document.getElementById('mustBeinvisible');
+
+    if (element) {
+        const hideElement = () => {
+            setTimeout(() => {
+                element.classList.add('custom-frame');
+            }, 5000);
+        };
+
+        document.addEventListener('mousemove', hideElement);
+        document.addEventListener('touchmove', hideElement);
+    }
+
+    /* -------------------------
+        MOBILE MENU
+    -------------------------- */
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    if (menuBtn && menu) {
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+
+    /* -------------------------
+        MODAL SYSTEM
+    -------------------------- */
+
+    // Open any modal via card click
+    document.addEventListener('click', function (e) {
+        const card = e.target.closest('[data-modal-id]');
+        if (!card) return;
+
+        e.preventDefault();
+
+        const modalId = card.dataset.modalId;
+        const modal = document.getElementById(modalId);
+        console.log(modal);
+
+        if (modal) {
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+    });
+
+    // Close modal (all modals)
+    // const modals = document.querySelectorAll('.modal');
+
+    // console.log('these modal are avalibe right now',modals);
+
+    // modals.forEach(modal => {
+    //     if(modal!==null){
+    //         let getId = document.getElementById('close-modal-btn-x');
+    //          if(getId!==null){
+    //             modal.style.display = 'none';
+    //          }else{
+    //             console.log('no close button found');
+    //          }
+    //     }
+    // });
+   let fix = document.querySelectorAll('.fixed');
+
+    fix.forEach(modal => {
+        const closeBtn = modal.querySelector('#close-modal-btn-x');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // optional
+                modal.classList.toggle('hidden');
+                console.log('close button clicked for modal:', modal);
+            });
+        }
+    });
+
+    
+
+ 
+        // // Escape key
+        // document.addEventListener('keydown', (event) => {
+        //     if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+        //         closeModal();
+        //     }
+        // });
+    // });
+    //     document.querySelectorAll('.modal').forEach(modal => {
+    // // close elements inside the modal (use classes not IDs if multiple modals)
+    // const closeBtns = modal.querySelector('#close-modal-btn-x'); // include X and regular button
+    // const close = () => {
+    //     if(close){
+    //         console.log('closing modal');
+    //     }
+    //     modal.classList.add('hidden');
+    //     document.body.classList.remove('overflow-hidden');
+    // };
+
+    // closeBtns.forEach(btn => btn.addEventListener('click', (ev) => {
+    //     ev.stopPropagation(); // prevent the modal-overlay click handler from misfiring
+    //     close();
+    // }));
+
+    // // clicking on overlay (the modal itself) closes if clicking outside content
+    // modal.addEventListener('click', (ev) => {
+    //     if (ev.target === modal) close();
+ 
+  
+
+
+
+
+    /* -------------------------
+        PORTFOLIO CARDS → OPEN MODAL
+    -------------------------- */
+    const portfolioCards = document.querySelectorAll('.img-card');
+
+    portfolioCards.forEach(card => {
+        card.addEventListener('click', function () {
+            const modalId = this.dataset.modalId;
+            const modal = document.getElementById(modalId);
+
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+        });
+    });
+
+
+    /* -------------------------
+        COLOR MIXER (RGB)
+    -------------------------- */
+
+    const redSlider = document.getElementById('red-slider');
+    const greenSlider = document.getElementById('green-slider');
+    const blueSlider = document.getElementById('blue-slider');
+
+    const redValue = document.getElementById('red-value');
+    const greenValue = document.getElementById('green-value');
+    const blueValue = document.getElementById('blue-value');
+
+    const colorBox = document.getElementById('color-box');
+
+    if (redSlider && greenSlider && blueSlider && colorBox) {
+
+        const updateColor = () => {
+            const r = redSlider.value;
+            const g = greenSlider.value;
+            const b = blueSlider.value;
+
+            colorBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+            redValue.textContent = r;
+            greenValue.textContent = g;
+            blueValue.textContent = b;
+        };
+
+        redSlider.addEventListener('input', updateColor);
+        greenSlider.addEventListener('input', updateColor);
+        blueSlider.addEventListener('input', updateColor);
+
+        updateColor(); // initial state
+    }
+
+
+   });

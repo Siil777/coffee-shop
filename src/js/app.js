@@ -4,6 +4,7 @@
 //= ../../node_modules/bootstrap/dist/js/bootstrap.bundle.js
 
 //=include partial/Hope_Depression_Anxiety.js
+//=include partial/forAurora.js
 
 
 

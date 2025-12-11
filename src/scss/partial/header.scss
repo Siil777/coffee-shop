@@ -25,6 +25,35 @@
             height: 100%;
             object-fit: cover;
         }
-.custonm-family {
-    font-family: Didot, serif;
-}
+        .custonm-family p{
+            margin: 70px 20px 15px 20px !important;
+            font-family: 'math', !important;
+        }
+        .custom-frame {
+        font-family: 'math';
+        color: #333; 
+        padding: 20px;
+        text-align: center;
+        transition: opacity 3s ease-out; 
+    }
+        @keyframes fade-out-animation {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+        .fade-out {
+        /* Apply the animation over a 0.5s duration */
+        animation: fade-out-animation 0.5s forwards; 
+    }
+    .open {
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    .custom-cut {
+        border-radius: 20% 80% 70% 30% / 30% 40% 60% 70%!important;
+    }

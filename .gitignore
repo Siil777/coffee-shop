@@ -1,10 +1,7 @@
-# /node_modules/
-# /build/
-# /.idea/
-*
+/node_modules/
+/src/
+/essentials/
 !build/
-!build/**
-!.gitignore
 
 
 

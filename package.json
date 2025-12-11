@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://siil777.github.io/stories",
   "scripts": {
     "build": "gulp build",
     "predeploy": "npm run build",

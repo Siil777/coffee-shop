@@ -196,7 +196,25 @@
         </div>
     </div>
 </section>
+<script>   document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('form-success');
 
+    if (contactForm && successMessage) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stops the page from reloading
+            
+            // Optional: Capture the form data if you need to fetch/send it to a backend API later
+            const formData = new FormData(this);
+            console.log("Form submitted successfully!", Object.fromEntries(formData));
+
+            // Hide the form fields and show the "Done" interface
+            contactForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        });
+    }
+});
+ </script>
             
         </main>
         <!-- <div id="index-1" class="modal" tabindex="-1">
